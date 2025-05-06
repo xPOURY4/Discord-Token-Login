@@ -1,0 +1,268 @@
+:root {
+    --primary: #5e72e4;
+    --primary-dark: #4756c3;
+    --secondary: #f7fafc;
+    --success: #2dce89;
+    --info: #11cdef;
+    --warning: #fb6340;
+    --danger: #f5365c;
+    --light: #f8f9fe;
+    --dark: #172b4d;
+    --muted: #8898aa;
+    --text: #172b4d;
+    --text-secondary: #8898aa;
+    --background: #ffffff;
+    --background-light: #f8f9fe;
+    --background-dark: #f7fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    width: 350px;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs {
+    display: flex;
+    background-color: var(--background-dark);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.discord-logo {
+    width: 120px;
+    height: auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 4px;
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: var(--text);
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(94, 114, 228, 0.3);
+}
+
+input::placeholder {
+    color: var(--text-secondary);
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+/* Error message */
+.error-message {
+    color: var(--danger);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* About Tab Styles */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.about-container h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--primary);
+    text-align: center;
+}
+
+.about-container p {
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dev-info, .privacy-section, .features-section {
+    background-color: var(--background-light);
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(50, 50, 93, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.dev-info h3, .privacy-section h3, .features-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: var(--dark);
+    position: relative;
+    padding-left: 15px;
+}
+
+.dev-info h3:before, .privacy-section h3:before, .features-section h3:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 16px;
+    background: linear-gradient(to bottom, var(--primary), var(--primary-dark));
+    border-radius: 2px;
+}
+
+.dev-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dev-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 4px;
+}
+
+.dev-links a:hover {
+    background-color: rgba(94, 114, 228, 0.1);
+    transform: translateX(3px);
+}
+
+.features-section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.features-section li {
+    margin-bottom: 6px;
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.version-info {
+    margin-top: 15px;
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    border-radius: 20px;
+    width: fit-content;
+    align-self: center;
+}
+
+.version-info p {
+    font-size: 12px;
+    color: white;
+    font-weight: 500;
+}

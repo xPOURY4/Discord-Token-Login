@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Discord Token Login",
+    "version": "1.0.0",
+    "description": "Securely log in to Discord using your account token. Fast and convenient Discord access.",
+    "author": "therealpourya",
+    "homepage_url": "https://github.com/HexQuant-hub/Discord-Token-Login",
+    "content_scripts": [{
+      "js": ["scripts/content.js"],
+      "matches": ["http://*.discord.com/*", "https://*.discord.com/*"],
+      "run_at": "document_start"
+    }],
+    "permissions": ["tabs"],
+    "action": {
+      "default_popup": "popup/index.html",
+      "default_icon": {
+        "128": "assets/icons/128.png",
+        "64": "assets/icons/64.png",
+        "32": "assets/icons/32.png"
+      }
+    },
+    "icons": {
+      "128": "assets/icons/128.png",
+      "64": "assets/icons/64.png",
+      "32": "assets/icons/32.png"
+    }
+  }

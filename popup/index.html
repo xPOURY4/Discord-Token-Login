@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Token Login</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="about">About</button>
+        </div>
+        
+        <div class="tab-content active" id="login-tab">
+            <div class="logo-container">
+                <img src="../assets/discord-logo.png" alt="Discord Logo" class="discord-logo">
+            </div>
+            
+            <div class="header">
+                <h1>Discord Token Login</h1>
+                <p>Enter your Discord token below to login</p>
+            </div>
+            
+            <form id="loginForm" autocomplete="off">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        id="tokenInput"
+                        name="token"
+                        placeholder="Enter Discord token"
+                        required
+                        spellcheck="false"
+                    >
+                </div>
+                <button type="submit" id="loginButton">
+                    <span>Login</span>
+                    <i class="fas fa-sign-in-alt"></i>
+                </button>
+            </form>
+        </div>
+        
+        <div class="tab-content" id="about-tab">
+            <div class="about-container">
+                <h2>About Discord Token Login</h2>
+                <p>Welcome to Discord Token Login! This powerful extension allows you to quickly access Discord with your token, making account management easier than ever.</p>
+                
+                <div class="dev-info">
+                    <h3>Developer Team</h3>
+                    <div class="dev-links">
+                        <a href="https://twitter.com/therealpourya" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-twitter"></i> @therealpourya
+                        </a>
+                        <a href="https://github.com/xPOURY4" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> xPOURY4
+                        </a>
+                        <a href="https://github.com/HexQuant-hub" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i> HexQuant-hub (Team)
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="privacy-section">
+                    <h3>Privacy Policy</h3>
+                    <p>Your privacy is our priority. This extension operates entirely on your device and never transmits your token to any external servers. Your data remains completely private and secure at all times.</p>
+                </div>
+                
+                <div class="features-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li>Instant Discord login with token</li>
+                        <li>Secure, local token storage</li>
+                        <li>Clean, intuitive interface</li>
+                        <li>Zero data collection</li>
+                    </ul>
+                </div>
+                
+                <div class="version-info">
+                    <p>Version: 1.0.0</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/popup.js"></script>
+</body>
+</html>
